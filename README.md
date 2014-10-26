@@ -1,1 +1,1 @@
-All the scripts for the NITC-library designed and developed by mighty Durgaprasad.
+All the scripts for the NITC-library for the year 2014-2015.
