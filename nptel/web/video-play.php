@@ -58,16 +58,25 @@
         <div class="content">
             <div class="clearFloat"></div>
             <div class="part">
-                <h1><a href="#">Video Player</a></h1>
-                <div class="player">
-                    <video id="example_video_1" class="video-js vjs-default-skin"
-                        controls preload="auto" width="640" height="264"
-                        poster="http://video-js.zencoder.com/oceans-clip.png"
-                        data-setup='{"example_option":true}'>
-                        <source src="http://192.168.240.11/hdd2/NPTEL/Phase2_Video/101101001/mod01lec01.mp4" type='video/mp4' />
-                        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-                    </video>
-                </div>
+                
+                         <?php
+                                                      $dir = htmlspecialchars($_GET['vid']);
+                                                        //echo $dir;
+                                                        //$files = array_diff(scandir($directory), array('..', '.'));
+                                                      $dh  = opendir($dir);
+                                                      while (false !== ($filename = readdir($dh))) {
+                                                        echo "<h1><a href=\"#\">Video ".$filename."</a></h1>";
+                                                        echo "<div class=\"player\">";
+                                                        echo "<video id=\"example_video_1\" class=\"video-js vjs-default-skin\" controls preload=\"auto\" width=\"640\" height=\"264\" data-setup=\'{\"example_option\":true}\'>";
+                                                        echo "<source src=\"http://192.168.240.11".$dir."/".$filename."\" type=\'video/mp4\' />";
+                                                        echo "<p class=\"vjs-no-js\">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href=\"http://videojs.com/html5-video-support/\" target=\"_blank\">supports HTML5 video</a></p>";
+                                                        echo "</video>";
+                                                        echo "</div>";
+                                                      }
+                                                        //print_r($files);
+                          ?>
+
+                       
                 <h2>Other Videos</h2>
 
          
