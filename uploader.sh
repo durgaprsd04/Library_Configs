@@ -1,2 +1,0 @@
-#Astm bash uploader
-
