@@ -61,28 +61,20 @@
         	<div class="content">
 		        <div class="clearFloat"></div>
 		        <div class="part">
-		                <h1><a href="#">Video Player</a></h1>
-		                <div class="player">
+		                <h1><a href="#">Video List</a></h1>
+
 						<?php
 							$dir = htmlspecialchars($_GET['vid']);
-							echo "<video id=\"example_video_1\" class=\"video-js vjs-default-skin\"
-								controls preload=\"auto\" width=\"640\" height=\"264\"
-								poster=\"".$dir."/image.jpg"."\"
-								data-setup=\'{\"example_option\":true}\'>";
-								
-	//							$files = array_diff(scandir($directory), array('..', '.'));
-								$dh  = opendir($dir);
-								while (false !== ($filename = readdir($dh))) {
-									echo "<source src=\"http://192.168.240.11".$dir."/".$filename."\" type=\'video/mp4\' />";
-								}
-							echo "<p class=\"vjs-no-js\">
-								To view this video please enable JavaScript, and consider upgrading to a web browser that 
-								<a href=\"http://videojs.com/html5-video-support/\" target=\"_blank\">supports HTML5 video</a></p>";
-							echo "</video>";
+
+	//						$files = array_diff(scandir($directory), array('..', '.'));
+							$dh  = opendir($dir);
+							while (false !== ($filename = readdir($dh))) {
+								echo "<a href=\"video_play.php?vid=".$dir."/".$filename."\"">".$filename."</a>";
+							}
+
 						?>
-                </div>
-                <h2>Other Videos</h2>
-				<div class="clearFloat"></div>
+
+
             </div>
         </div>
     </div>
