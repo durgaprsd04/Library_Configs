@@ -19,6 +19,7 @@ a{text-decoration:none;}
 /*
 Style
 */
+
 body{
 	background:#f9f9f9;
 }
@@ -38,7 +39,7 @@ header{
 	padding:18px 0;
 }
 .logo a{
-	background:url(../../web/images/logo.jpg) no-repeat 0 0;
+	background:url(../images/logo.jpg) no-repeat 0 0;
 	height:130px;
 	width:200px;
 	display:block;
@@ -153,7 +154,7 @@ header{
 	position:relative;
 }
 .go{
-	background:url(../../web/images/go.png) no-repeat;
+	background:url(../images/go.png) no-repeat;
 	top:3px;
 }
 .fb{
@@ -187,6 +188,17 @@ header{
 	position:relative;
 	vertical-align:middle;
 }
+
+/*
+div#myDIV {
+    position:fixed;
+    width:100px;
+    height:100px;
+    background:red;
+    left:10px;
+    top:100px;
+}*/
+
 /* sidebar */
 .sidebar{
 	width:220px;
@@ -199,6 +211,8 @@ header{
 		margin:0 0 18px 0;
 		background: #ffffff;
 		overflow:hidden;
+		position:fixed;
+		left:10px;
 	}
 	.widget ul{
 		list-style:none;
@@ -218,7 +232,7 @@ header{
 		z-index:2;
 		width:8px;
 		height:8px;
-		background:url(../../web/images/rt-arrow.png) no-repeat;
+		background:url(../images/rt-arrow.png) no-repeat;
 	}
 	.widget li:last-child{
 		border-bottom:1px solid #2d2d2d;
@@ -263,7 +277,7 @@ header{
 	width:16px;
 	height:16px;
 	cursor:pointer;
-	background:url(../../web/images/search.png) no-repeat;
+	background:url(../images/search.png) no-repeat;
 	border:none;
 	outline:none;
 	position:relative;

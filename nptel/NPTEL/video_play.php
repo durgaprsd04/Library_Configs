@@ -60,19 +60,25 @@
             <div class="part">
                 <h1><a href="#">Video Player</a></h1>
                 <div class="player">
-                    <video id="example_video_1" class="video-js vjs-default-skin"
-                        controls preload="auto" width="640" height="264"
-                        poster="http://video-js.zencoder.com/oceans-clip.png"
-                        data-setup='{"example_option":true}'>
-                        <source src="http://192.168.240.11/hdd2/NPTEL/Phase2_Video/101101001/mod01lec01.mp4" type='video/mp4' />
-                        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-                    </video>
+                <?php
+			$videoname = htmlspecialchars($_GET['vid']);
+			echo "<video id=\"example_video_1\" class=\"video-js vjs-default-skin\"
+                        controls preload=\"auto\" width=\"640\" height=\"264\"
+                        poster=\"http://video-js.zencoder.com/oceans-clip.png\"
+                        data-setup=\'{\"example_option\":true}\'>";
+                        echo "<source src=\"".$videoname."\" type=\'video/mp4\' />
+                        echo "<p class=\"vjs-no-js\">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href=\"http://videojs.com/html5-video-support/\" target=\"_blank\">supports HTML5 video</a></p>";
+                   	echo "</video>";
+
+
+		?>
+
                 </div>
                 <h2>Other Videos</h2>
 
-         
+
       <div class="clearFloat"></div>
-            </div>          
+            </div>
         </div>
     </div>
 </body>
